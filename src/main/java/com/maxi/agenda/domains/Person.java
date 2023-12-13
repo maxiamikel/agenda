@@ -16,7 +16,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "person", uniqueConstraints = { @UniqueConstraint(columnNames = "email") })
+@Table(name = "person", uniqueConstraints = { @UniqueConstraint(columnNames = "email"),
+        @UniqueConstraint(columnNames = "personalNumber"), @UniqueConstraint(columnNames = "foneNumber") })
 @Getter
 @Setter
 // @NoArgsConstructor

@@ -11,12 +11,10 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import jakarta.persistence.UniqueConstraint;
-import lombok.Getter;
-import lombok.Setter;
 
 @Entity
-@Getter
-@Setter
+// @Getter
+// @Setter
 // @NoArgsConstructor
 // @AllArgsConstructor
 @Table(name = "login", uniqueConstraints = { @UniqueConstraint(columnNames = "username") })
@@ -28,7 +26,7 @@ public class Login {
 
     @OneToOne
     private Person person;
-
+    // private Long personId;
     private String username;
     private String password;
     @Enumerated(EnumType.STRING)
@@ -44,4 +42,45 @@ public class Login {
         this.person = person;
         this.role = PersonRole.GUEST;
     }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public PersonRole getRole() {
+        return role;
+    }
+
+    public void setRole(PersonRole role) {
+        this.role = role;
+    }
+
+    public Person getPerson() {
+        return person;
+    }
+
+    public void setPerson(Person person) {
+        this.person = person;
+    }
+
 }

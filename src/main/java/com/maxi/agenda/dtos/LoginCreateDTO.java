@@ -25,6 +25,10 @@ public class LoginCreateDTO {
         return id;
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public Person getPerson() {
         return person;
     }
