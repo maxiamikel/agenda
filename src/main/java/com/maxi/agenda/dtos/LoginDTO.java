@@ -4,14 +4,14 @@ public class LoginDTO {
 
     private Long id;
 
-    private String username;
+    private String user;
     private String password;
 
     public LoginDTO() {
     }
 
-    public LoginDTO(String username, String password) {
-        this.username = username;
+    public LoginDTO(String user, String password) {
+        this.user = user;
         this.password = password;
     }
 
@@ -19,12 +19,12 @@ public class LoginDTO {
         return id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getUser() {
+        return user;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getPassword() {

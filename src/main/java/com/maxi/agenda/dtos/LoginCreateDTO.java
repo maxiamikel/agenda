@@ -9,7 +9,7 @@ public class LoginCreateDTO {
 
     private Person person;
 
-    private String username;
+    private String user;
     private String password;
 
     public LoginCreateDTO() {
@@ -17,7 +17,7 @@ public class LoginCreateDTO {
 
     public LoginCreateDTO(Login login) {
         this.person = login.getPerson();
-        this.username = login.getUsername();
+        this.user = login.getUser();
         this.password = login.getPassword();
     }
 
@@ -37,12 +37,12 @@ public class LoginCreateDTO {
         this.person = person;
     }
 
-    public String getUsername() {
-        return username;
+    public String getUser() {
+        return user;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUser(String user) {
+        this.user = user;
     }
 
     public String getPassword() {

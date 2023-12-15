@@ -5,12 +5,13 @@ import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.maxi.agenda.domains.Login;
-import com.maxi.agenda.domains.Person;
 
 public interface LoginRepository extends JpaRepository<Login, Long> {
 
-    Optional<Person> findByUsernameAndPassword(String username, String password);
+    // @Query("SELECT p FROM Login p WHERE p.username =:username and p.password
+    // =:password")
+    public Login findByUserAndPassword(String user, String password);
 
-    Optional<Login> findByUsername(String username);
+    Optional<Login> findByUser(String user);
 
 }

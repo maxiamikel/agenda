@@ -27,7 +27,7 @@ public class Login {
     @OneToOne
     private Person person;
     // private Long personId;
-    private String username;
+    private String user;
     private String password;
     @Enumerated(EnumType.STRING)
     private PersonRole role;
@@ -36,8 +36,8 @@ public class Login {
         // super();
     }
 
-    public Login(String username, String password, Person person) {
-        this.username = username;
+    public Login(String user, String password, Person person) {
+        this.user = user;
         this.password = password;
         this.person = person;
         this.role = PersonRole.GUEST;
@@ -51,12 +51,12 @@ public class Login {
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getUser() {
+        return user;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUser(String user) {
+        this.user = user;
     }
 
     public String getPassword() {

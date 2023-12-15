@@ -5,15 +5,15 @@ import com.maxi.agenda.enums.PersonRole;
 public class NewLoginCreatedDTO {
 
     private Long id;
-    private String username;
+    private String user;
     private String firstname;
     private PersonRole role;
 
     public NewLoginCreatedDTO() {
     }
 
-    public NewLoginCreatedDTO(String username, String firstname, PersonRole role) {
-        this.username = username;
+    public NewLoginCreatedDTO(String user, String firstname, PersonRole role) {
+        this.user = user;
         this.firstname = firstname;
         this.role = role;
     }
@@ -26,12 +26,12 @@ public class NewLoginCreatedDTO {
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getUser() {
+        return user;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUser(String user) {
+        this.user = user;
     }
 
     public String getFirstname() {

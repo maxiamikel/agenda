@@ -16,4 +16,10 @@ public class ExceptionHandlerController {
         return ResponseEntity.status(HttpStatus.NOT_FOUND.value()).body(err);
     }
 
+    @ExceptionHandler(ObjectClassDuplicateException.class)
+    public ResponseEntity<StandardError> objectClassDuplicateException(ObjectClassDuplicateException e) {
+        StandardError err = new StandardError(System.currentTimeMillis(), HttpStatus.CONFLICT.value(), e.getMessage());
+        return ResponseEntity.status(HttpStatus.CONFLICT.value()).body(err);
+    }
+
 }

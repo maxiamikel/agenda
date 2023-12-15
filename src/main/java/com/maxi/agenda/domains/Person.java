@@ -8,16 +8,16 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import jakarta.persistence.UniqueConstraint;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "person", uniqueConstraints = { @UniqueConstraint(columnNames = "email"),
-        @UniqueConstraint(columnNames = "personalNumber"), @UniqueConstraint(columnNames = "foneNumber") })
+// @Table(name = "person", uniqueConstraints = { @UniqueConstraint(columnNames =
+// "email"),
+// @UniqueConstraint(columnNames = "personalNumber"),
+// @UniqueConstraint(columnNames = "foneNumber") })
 @Getter
 @Setter
 // @NoArgsConstructor
